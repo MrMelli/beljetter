@@ -205,6 +205,6 @@ allocate_seat (FlightListNode * flight, BookingListNode * booking, int *row,
 int main (int argc,char*argv[])
 {
 	BookingListNode * bookingList=read_bookings(argv[2]);
-	FlightListNode * flightList=read_flights(argv[2]);
+	FlightListNode * flightList=read_flights(argv[1]);
 	create_tickets(bookingList , flightList);
 }
