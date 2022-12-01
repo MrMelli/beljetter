@@ -67,7 +67,8 @@ BookingListNode *read_bookings(const char *filename)
 	while( fscanf(fp,"%d,%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^\n]\n",&bln.booking,bln.datestr,bln.timestr,bln.dep,bln.des,bln.class,bln.fname,bln.lname) == 8 ) {
 	BookingListNode *nn = malloc(sizeof(FlightListNode)); /* Allocate space to save the read information */
 	memcpy(nn,&bln,sizeof(FlightListNode));              /* Copy the read data into the allocated memory */
-	
+	nn->next =  head;                                    /* Set the next pointer to head .... */
+	head = nn;                                           /* then set the head to the new node. */
 }
 return(head); 
 }
@@ -110,7 +111,7 @@ int create_tickets(BookingListNode *bookings, FlightListNode *flights)
 				}
 			}
 		}
-		  else printf("?");
+		  
 
 
 	}
