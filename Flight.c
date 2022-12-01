@@ -206,4 +206,5 @@ int main (int argc,char*argv[])
 {
 	BookingListNode * bookingList=read_bookings(argv[2]);
 	FlightListNode * flightList=read_flights(argv[2]);
+	create_tickets(bookingList , FlightList);
 }
