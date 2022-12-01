@@ -202,3 +202,8 @@ allocate_seat (FlightListNode * flight, BookingListNode * booking, int *row,
  
   return (1);
 }
+int main (int argc,char*argv[])
+{
+	BookingListNode * bookingList=readbookings(argv[2]);
+	FlightListNode * flightList=readflights(argv[2]);
+}
