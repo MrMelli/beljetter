@@ -96,6 +96,7 @@ int create_tickets(BookingListNode *bookings, FlightListNode *flights)
           !strcmp(blnp->datestr,flnp->datestr) &&  
           !strcmp(blnp->timestr,flnp->timestr) ) {
         /* allocate seat and mark it booked */
+				printf("found flight");
         /* see hint 7 */
         int row=0, seat=0;
 
@@ -109,6 +110,7 @@ int create_tickets(BookingListNode *bookings, FlightListNode *flights)
 				}
 			}
 		}
+		  else printf("?");
 
 
 	}
