@@ -64,7 +64,7 @@ BookingListNode *read_bookings(const char *filename)
 	BookingListNode *head=NULL;       /* A pointer to the first node in the linked list */
 	FILE *fp = fopen(filename,"r");  /* Open the file where flight data is */
 	//bookingnumber,date,time,departure,destination,seatclass,firstname,surname
-	while( fscanf(fp,"%d,%[^,],%[^,],%[^,],%[^,],%d,%d,%d\n",&bln.bookingnumber,bln.date,bln.time,bln.deptinstion,bln.destination,&bln.seatclass,&bln.firstname,&bln.surname) == 8 ) {
+	while( fscanf(fp,"%d,%[^,],%[^,],%[^,],%[^,],%d,%d,%d\n",&bln.booking,bln.datestr,bln.timestr,bln.dep,bln.des,&bln.class,&bln.fname,&bln.lname) == 8 ) {
 	BookingListNode *nn = malloc(sizeof(FlightListNode)); /* Allocate space to save the read information */
 	memcpy(nn,&bln,sizeof(FlightListNode));              /* Copy the read data into the allocated memory */
 	
